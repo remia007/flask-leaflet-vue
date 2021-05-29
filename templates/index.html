@@ -1,0 +1,37 @@
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.rawgit.com/mapbox/wellknown/master/wellknown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    
+</head>
+<body>
+    <div id="container">
+
+        <h1>Flask + Leaflet + Vue</h1>
+
+        <div id="leaflet-map"></div>
+
+        <div id="widgets-color-select" class="form-group">
+            <label for="color-select">color select: </label>
+            <select id="color-select" class="form-control">
+                <option value="black">Black</option>
+                <option value="blue">Blue</option>
+                <option value="red">Red</option>
+                <option value="yellow">yellow</option>
+                <option value="green">Green</option>
+                <option value="hotpink">Pink</option>
+            </select>
+        </div>
+
+        <div id="widgets-initialize">
+            <button id="initialize-btn" class="btn-push" v-on:click="initialize">initialize</button>
+        </div>
+
+    </div>
+
+    <script src="{{url_for('static', filename='main.js')}}"></script>
+</body>
