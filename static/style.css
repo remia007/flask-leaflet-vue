@@ -6,7 +6,7 @@ body {
 #container {
     display: grid;
     grid-template-columns: 20px repeat(8, 200px) 20px;
-    grid-template-rows: 60px repeat(6, 100px);
+    grid-template-rows: 60px repeat(6, 90px);
     gap: 12px 20px;
 }
 h1 {
@@ -16,9 +16,8 @@ h1 {
 }
 
 #leaflet-map {
-    height: 500px;
     width: auto;
-    grid-row: 2 / 3;
+    grid-row: 2 / 8;
     grid-column: 3 / 8;
     border: 3px solid #ccc;
 }
